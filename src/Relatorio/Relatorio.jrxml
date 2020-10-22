@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cdf88587-c2cc-4c9c-b1b2-ddb92e25c735">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT N.CODIGOIDENT_ENC, C.NOME_CID, E.LOGRADOURO_END, E.BAIRRO_END, COUNT(I.OBJCOD_OBJBASE), U.NOME_CLI FROM CIDADE C, ENDERECO E, ITEMTRANSPORTE I, CLIENTE U, ENCOMENDA N WHERE N.ESTADO_ENC = 1 AND N.ENDERECOORIGEM_ENC_OBJCOD_OBJBASE = E.OBJCOD_OBJBASE  AND E.CIDADE_END_OBJCOD_OBJBASE = C.OBJCOD_OBJBASE AND N.OBJCOD_OBJBASE = I.ENCOMENDA_ITEM_OBJCOD_OBJBASE  AND N.CLIENTEORIGEM_ENC_OBJCOD_OBJBASE = U.OBJCOD_OBJBASE GROUP BY C.NOME_CID ORDER BY C.NOME_CID, E.BAIRRO_END;]]>
+	</queryString>
+	<field name="CODIGOIDENT_ENC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOME_CID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LOGRADOURO_END" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BAIRRO_END" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COUNT(I.OBJCOD_OBJBASE)" class="java.lang.Long"/>
+	<field name="NOME_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<rectangle>
+					<reportElement mode="Opaque" x="2" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="268969ff-d6a6-4a8a-8ead-d6d5ffcc4944"/>
+				</rectangle>
+				<textField isBlankWhenNull="false">
+					<reportElement style="SubTitle" x="41" y="13" width="297" height="24" forecolor="#333333" uuid="fa997d54-c65e-4395-8e3c-3f3ba6df1689"/>
+					<textElement markup="none">
+						<font fontName="Trebuchet MS" size="14" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{BAIRRO_END}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="4"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="595" height="64" uuid="fb52fcd8-bd96-4407-b77f-d8fef8c56f74"/>
+				<imageExpression><![CDATA["wood.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="144" y="13" width="163" height="33" forecolor="#000000" uuid="c486bb33-2ccc-47b1-95a1-1bfe5fcc1f40"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="26"/>
+				</textElement>
+				<text><![CDATA[Relatório]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9828a84b-d7ca-41d6-8959-90d076337486"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Column header" x="2" y="18" width="248" height="18" uuid="bad2bf06-ff4c-44c9-b148-997e5c17e23a"/>
+				<textElement markup="none">
+					<font fontName="Trebuchet MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME_CID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="75f62e27-1440-4581-83ab-8f15925fa47f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="144" y="0" width="351" height="15" uuid="cf072021-0729-4d6b-8798-61a2e00e6ef4"/>
+				<textFieldExpression><![CDATA[$F{LOGRADOURO_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="495" y="1" width="60" height="15" uuid="dc02f3b3-d400-47e0-86bc-184f30de418e"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{COUNT(I.OBJCOD_OBJBASE)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="0" y="1" width="144" height="15" uuid="13f15838-6192-4c91-ab8d-11b665afc545"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{NOME_CLI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="10266331-d317-4cff-9982-59c5f5d517c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="4f1c70f4-e045-4af4-a1a2-e1a01bbd73d9"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="a4e590da-dc48-48d0-a283-5ce7621360cc"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="1116618d-d3ab-466b-bbc3-1af6fc71a044"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
