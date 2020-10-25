@@ -35,11 +35,9 @@ O cadastro do atendimento registrará todos os medicamentos que foram utilizados
 Em todos os campos do sistema que têm o botão Lupa para pesquisar, caso não localize registros com a informação inserida, será aberta a tela de pesquisa da entidade correspondente.
 ![Alt text](https://github.com/abneramorim/meuprojeto/blob/master/cadastro_atendimento.png)
 
-**-** O cliente é localizado pelo número da carteira
-
-**-** O produto é localizado pelo identificador cadastrado
-
-**-** A flag Medicamento Externo é utilizada para indicar que o produto não deverá ser abatido no estoque
+- O cliente é localizado pelo número da carteira
+- O produto é localizado pelo identificador cadastrado
+- A flag Medicamento Externo é utilizada para indicar que o produto não deverá ser abatido no estoque
 
 
 #### Pesquisas
