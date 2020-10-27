@@ -2,3 +2,5 @@
 /build/
 /dist/
 /src/META-INF/persistence*
+/src/Controller/*
+/src/DAO/*

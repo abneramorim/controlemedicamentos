@@ -15,7 +15,7 @@ import com.google.gson.JsonPrimitive;
 
 /**
  *
- * @author Heverton Pires
+ * @author Abner Amorim
  */
 public class Solicitante extends javax.swing.JDialog {
 

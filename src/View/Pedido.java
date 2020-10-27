@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Abner
+ * @author Abner Amorim
  */
 public class Pedido extends javax.swing.JDialog {
 

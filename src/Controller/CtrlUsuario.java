@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  *
- * @author abner
+ * @author Abner Amorim
  */
 public class CtrlUsuario extends ControllerBaseCtrl {
 

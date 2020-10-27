@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author abner
+ * @author Abner Amorim
  */
 public abstract class ControllerBaseCtrl {
 

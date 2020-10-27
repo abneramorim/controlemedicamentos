@@ -13,7 +13,7 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author abner
+ * @author Abner Amorim
  */
 public class FabricaJPA {
     

@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Heverton Pires
+ * @author Abner Amorim
  */
 public class Pesquisa_Atendimento extends javax.swing.JDialog {
 

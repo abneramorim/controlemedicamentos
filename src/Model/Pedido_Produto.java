@@ -5,7 +5,7 @@ import javax.persistence.OneToOne;
 
 /**
  *
- * @author Abner
+ * @author Abner Amorim
  */
 @Entity
 public class Pedido_Produto extends ObjetoBase{

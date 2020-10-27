@@ -36,7 +36,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Heverton Pires
+ * @author Abner Amorim
  */
 public class Util {
 

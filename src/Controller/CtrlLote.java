@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  *
- * @author abner
+ * @author Abner Amorim
  */
 public class CtrlLote extends ControllerBaseCtrl {
 

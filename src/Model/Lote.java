@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 
 /**
  *
- * @author Abner
+ * @author Abner Amorim
  */
 @Entity
 public class Lote extends ObjetoBase{

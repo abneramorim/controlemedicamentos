@@ -25,7 +25,7 @@ import org.dom4j.io.XMLWriter;
 
 /**
  *
- * @author Heverton Pires
+ * @author Abner Amorim
  */
 public class Configuracao extends javax.swing.JFrame {
 

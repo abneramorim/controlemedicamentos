@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 
 /**
  *
- * @author abner
+ * @author Abner Amorim
  * @param <T>
  */
 public class PersistenciaJPA<T extends ObjetoBase> {

@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  *
- * @author abner
+ * @author Abner Amorim
  */
 public class CtrlCliente extends ControllerBaseCtrl{
     @Override

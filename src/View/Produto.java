@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  *
- * @author Abner
+ * @author Abner Amorim
  */
 public class Produto extends javax.swing.JDialog {
 
