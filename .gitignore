@@ -1,6 +1,6 @@
 /nbproject/private/
 /build/
 /dist/
-/src/META-INF/persistence*
-/src/Controller/*
-/src/DAO/*
+/src/META-INF/
+/src/Controller/
+/src/DAO/
